@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 import { CartService } from '../cart.service';
@@ -11,7 +11,7 @@ import { CartService } from '../cart.service';
 export class CartComponent {
 
   items = this.cartService.getItems();
-
+  changeLog: [] = [] ;
   checkoutForm = this.formBuilder.group({
     name: '',
     address: ''
@@ -22,10 +22,19 @@ export class CartComponent {
     private formBuilder: FormBuilder,
   ) {}
 
+  ngOnInit(): void {
+    console.log("cart ngOnInit");
+  }
+
+  ngDoCheck(): void {
+    console.log("cart ngDoCheck");
+  }
+
   onSubmit(): void {
     // Process checkout data here
     this.items = this.cartService.clearCart();
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
   }
+
 }
