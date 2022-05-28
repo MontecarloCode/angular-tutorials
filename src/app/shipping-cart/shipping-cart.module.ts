@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -19,11 +18,13 @@ import { ShippingComponent } from './shipping/shipping.component';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'shipping-cart', component: ShippingCartComponent },
-      { path: 'shipping-cart/products', component: ProductListComponent },
-      { path: 'shipping-cart/products/:productId', component: ProductDetailsComponent },
-      { path: 'shipping-cart/cart', component: CartComponent },
-      { path: 'shipping-cart/shipping', component: ShippingComponent },
+      { path: 'shipping-cart', component: ShippingCartComponent, children: [
+        { path: '', redirectTo: 'products', pathMatch: 'full' },
+        { path: 'products', component: ProductListComponent },
+        { path: 'products/:productId', component: ProductDetailsComponent },
+        { path: 'cart', component: CartComponent },
+        { path: 'shipping', component: ShippingComponent },
+      ]},
     ])
   ],
   declarations: [
