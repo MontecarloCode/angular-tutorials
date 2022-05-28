@@ -1,0 +1,12 @@
+<div ngbDropdown class="d-inline-block">
+  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>lifecycle hooks</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/hooks']">Peek-a-boo: (most) lifecycle hooks</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/spy']">Spy: directive with OnInit & OnDestroy</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/onchanges']">OnChanges</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/docheck']">DoCheck</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/after-view']">AfterViewInit & AfterViewChecked</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/after-content']">AfterContentInit & AfterContentChecked</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/counter']">Counter: OnChanges + Spy directive</button>
+  </div>
+</div>
