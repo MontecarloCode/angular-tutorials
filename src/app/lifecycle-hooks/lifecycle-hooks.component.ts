@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lifecycle-hooks',
-  templateUrl: './lifecycle-hooks.component.html',
-  styleUrls: ['./lifecycle-hooks.component.css']
+  template: `
+    <h1 id="top">Lifecycle Hooks</h1>
+    <router-outlet></router-outlet>
+  `,
 })
 export class LifecycleHooksComponent implements OnInit {
 
