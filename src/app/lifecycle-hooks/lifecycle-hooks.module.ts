@@ -18,6 +18,8 @@ import { AfterContentParentComponent } from './after-content-parent/after-conten
 import { AfterContentComponent } from './after-content-parent/after-content.component';
 import { DoCheckComponent } from './do-check-parent/do-check.component';
 import { DoCheckParentComponent } from './do-check-parent/do-check-parent.component';
+import { CounterParentComponent } from './counter-parent/counter-parent.component';
+import { CounterComponent } from './counter-parent/counter.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { DoCheckParentComponent } from './do-check-parent/do-check-parent.compon
     AfterContentComponent,
     DoCheckParentComponent,
     DoCheckComponent,
+    CounterParentComponent,
+    CounterComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +53,7 @@ import { DoCheckParentComponent } from './do-check-parent/do-check-parent.compon
         { path: 'docheck', component: DoCheckParentComponent }, 
         { path: 'after-view', component: AfterViewParentComponent }, 
         { path: 'after-content', component: AfterContentParentComponent }, 
+        { path: 'counter', component: CounterParentComponent }, 
       ]},
     ]),
   ]
