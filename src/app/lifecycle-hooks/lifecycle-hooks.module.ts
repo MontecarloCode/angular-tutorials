@@ -9,6 +9,8 @@ import { PeekABooComponent } from './peek-a-boo-parent/peek-a-boo/peek-a-boo.com
 import { PeekABooDirective } from '../directives/peek-a-boo.directive';
 import { SpyDirective } from '../directives/spy.directive';
 import { SpyComponent } from './spy/spy.component';
+import { OnChangesParentComponent } from './on-changes-parent/on-changes-parent.component';
+import { OnChangesComponent } from './on-changes-parent/on-changes.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { SpyComponent } from './spy/spy.component';
     SpyComponent,
     PeekABooDirective,
     SpyDirective,
+    OnChangesParentComponent,
+    OnChangesComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +31,7 @@ import { SpyComponent } from './spy/spy.component';
         { path: '', redirectTo: 'hooks', pathMatch: 'full' },
         { path: 'hooks', component: PeekABooParentComponent }, 
         { path: 'spy', component: SpyComponent }, 
+        { path: 'onchanges', component: OnChangesParentComponent }, 
       ]},
     ]),
   ]

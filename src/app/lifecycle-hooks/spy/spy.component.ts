@@ -22,10 +22,12 @@ export class SpyComponent {
       this.logger.tick();
     }
   }
+
   removeHero(hero: string) {
     this.heroes.splice(this.heroes.indexOf(hero), 1);
     this.logger.tick();
   }
+  
   reset() {
     this.logger.log('reset');
     this.heroes = [];
