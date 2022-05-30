@@ -24,10 +24,3 @@ export class LoggerService {
   tick() {  this.tick_then(() => { }); }
   tick_then(fn: () => any) { setTimeout(fn, 0); }
 }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
