@@ -1,5 +1,5 @@
-<div ngbDropdown class="d-inline-block">
-  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>lifecycle hooks</button>
+<div ngbDropdown class="d-inline-block" *ngIf="parent == 'lifecycle hooks'">
+  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/lifecycle']">{{parent}}</button>
   <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
     <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/hooks']">Peek-a-boo: (most) lifecycle hooks</button>
     <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/spy']">Spy: directive with OnInit & OnDestroy</button>
@@ -8,5 +8,14 @@
     <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/after-view']">AfterViewInit & AfterViewChecked</button>
     <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/after-content']">AfterContentInit & AfterContentChecked</button>
     <button class="dropdownItem" ngbDropdownItem [routerLink]="['/lifecycle/counter']">Counter: OnChanges + Spy directive</button>
+  </div>
+</div>
+
+<div ngbDropdown class="d-inline-block" *ngIf="parent == 'encapsulation'">
+  <button class="btn btn-outline-secondary" id="dropdownBasic2" ngbDropdownToggle [routerLink]="['/encapsulation']">{{parent}}</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/encapsulation/no-encapsulation']">None Encapsulation</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/encapsulation/emulated-encapsulation']">Emulated Encapsulation</button>
+    <button class="dropdownItem" ngbDropdownItem [routerLink]="['/encapsulation/shadow-dom-encapsulation']">Emulated Encapsulation</button>
   </div>
 </div>

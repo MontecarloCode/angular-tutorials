@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'ngbd-dropdown',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ExampleDropdownComponent implements OnInit{
+  @Input() parent!: string;
+
   constructor() { }
 
   ngOnInit(): void {

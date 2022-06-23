@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { HeroesOfTourRoutingModule } from './heroes-of-tour-routing.module';
 
-import { InMemoryDataService } from '../services/in-memory-data.service';
+import { HeroesOfTourRoutingModule } from './heroes-of-tour-routing.module';
+import { InMemoryDataService } from './../services/in-memory-data.service';
 import { HeroesOfTourComponent } from './heroes-of-tour.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
